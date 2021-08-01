@@ -1,0 +1,1 @@
+Esta é uma versão alternativa da API que eu fiz. A primeira versão também está disponível no meu github; entretanto não consegui linkar com o database.

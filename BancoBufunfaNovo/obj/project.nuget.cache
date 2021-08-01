@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "npNRxs4WuknuUku8sYC9yBBPBhzmKak8Asx0wgJn4wX+iGmUzJkavcbPsbv3oZQGYCPTfgsbIp5cQ6TKqAoH5g==",
+  "dgSpecHash": "ieGb3sKsh1UDsVTUiMACgJoQQ+OSx1fmBTpgeZmZUKyUtj9TMjhJ5Q3wIMWyy/l2TGwJGwzNjj5EXereyKMw/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\usuario\\source\\repos\\BancoBufunfaNovo\\BancoBufunfaNovo\\BancoBufunfaNovo.csproj",
+  "projectFilePath": "C:\\Users\\usuario\\source\\repos\\BancoBufunfaNovo\\BancoBufunfaAPI-Nova\\BancoBufunfaNovo\\BancoBufunfaNovo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\usuario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

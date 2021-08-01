@@ -7493,11 +7493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usuario\\source\\repos\\BancoBufunfaNovo\\BancoBufunfaNovo\\BancoBufunfaNovo.csproj",
+      "projectUniqueName": "C:\\Users\\usuario\\source\\repos\\BancoBufunfaNovo\\BancoBufunfaAPI-Nova\\BancoBufunfaNovo\\BancoBufunfaNovo.csproj",
       "projectName": "BancoBufunfaNovo",
-      "projectPath": "C:\\Users\\usuario\\source\\repos\\BancoBufunfaNovo\\BancoBufunfaNovo\\BancoBufunfaNovo.csproj",
+      "projectPath": "C:\\Users\\usuario\\source\\repos\\BancoBufunfaNovo\\BancoBufunfaAPI-Nova\\BancoBufunfaNovo\\BancoBufunfaNovo.csproj",
       "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usuario\\source\\repos\\BancoBufunfaNovo\\BancoBufunfaNovo\\obj\\",
+      "outputPath": "C:\\Users\\usuario\\source\\repos\\BancoBufunfaNovo\\BancoBufunfaAPI-Nova\\BancoBufunfaNovo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
