@@ -35,6 +35,7 @@ namespace BancoBufunfaNovo
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BancoBufunfaNovo", Version = "v1" });
             });
 
+            //Preparando para linkar com o db
             services.AddDbContext<BancoBufunfaNovoContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("BancoBufunfaNovoContext"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.6.3-mariadb")));
         }
