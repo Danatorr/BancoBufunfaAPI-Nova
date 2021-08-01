@@ -21,32 +21,30 @@ namespace BancoBufunfaNovo.Controllers
             _context = context;
         }
 
-        // GET: api/Clientes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cliente>>> GetCliente()
         {
             return await _context.Cliente.ToListAsync();
         }
 
-        // GET: api/Clientes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Cliente>> GetCliente(int id)
         {
+            //Buscando cliente, caso null retornar notfound
             var cliente = await _context.Cliente.FindAsync(id);
 
             if (cliente == null)
             {
-                return NotFound();
+                return NotFound($"O cliente com id {id} não pode ser achado!");
             }
 
             return cliente;
         }
 
-        // PUT: api/Clientes/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCliente(int id, Cliente cliente)
         {
+            //Buscando cliente, caso null retornar badrequest
             if (id != cliente.Id)
             {
                 return BadRequest();
@@ -73,8 +71,6 @@ namespace BancoBufunfaNovo.Controllers
             return NoContent();
         }
 
-        // POST: api/Clientes
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
         {
@@ -84,14 +80,14 @@ namespace BancoBufunfaNovo.Controllers
             return CreatedAtAction("GetCliente", new { id = cliente.Id }, cliente);
         }
 
-        // DELETE: api/Clientes/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente(int id)
         {
+            //Buscando o cliente, caso não exista retornar um notfound
             var cliente = await _context.Cliente.FindAsync(id);
             if (cliente == null)
             {
-                return NotFound();
+                return NotFound($"O cliente com id {id} não pode ser achado!");
             }
 
             _context.Cliente.Remove(cliente);
