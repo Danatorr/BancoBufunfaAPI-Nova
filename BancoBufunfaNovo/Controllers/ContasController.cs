@@ -38,7 +38,7 @@ namespace BancoBufunfaNovo.Controllers
                 return NotFound($"A conta com id {id} não pode ser achada!");
             }
 
-            return conta;
+            return Ok(conta);
         }
 
         [HttpPut("{id}")]
