@@ -21,29 +21,26 @@ namespace BancoBufunfaNovo.Controllers
             _context = context;
         }
 
-        // GET: api/Contas
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Conta>>> GetConta()
         {
             return await _context.Conta.ToListAsync();
         }
 
-        // GET: api/Contas/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Conta>> GetConta(int id)
         {
+            //Checando caso a conta não é null, caso sim, retornar not found
             var conta = await _context.Conta.FindAsync(id);
 
             if (conta == null)
             {
-                return NotFound();
+                return NotFound($"A conta com id {id} não pode ser achada!");
             }
 
             return conta;
         }
 
-        // PUT: api/Contas/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutConta(int id, Conta conta)
         {
@@ -73,8 +70,6 @@ namespace BancoBufunfaNovo.Controllers
             return NoContent();
         }
 
-        // POST: api/Contas
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Conta>> PostConta(Conta conta)
         {
@@ -84,14 +79,15 @@ namespace BancoBufunfaNovo.Controllers
             return CreatedAtAction("GetConta", new { id = conta.Id }, conta);
         }
 
-        // DELETE: api/Contas/5
+        //Deletar conta
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteConta(int id)
         {
+            //Checando caso a conta existe, caso null retornar notfound
             var conta = await _context.Conta.FindAsync(id);
             if (conta == null)
             {
-                return NotFound();
+                return NotFound($"A conta com o id {id} não pode ser achada!");
             }
 
             _context.Conta.Remove(conta);

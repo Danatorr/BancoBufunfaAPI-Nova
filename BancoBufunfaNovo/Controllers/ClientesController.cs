@@ -26,7 +26,7 @@ namespace BancoBufunfaNovo.Controllers
         {
             return await _context.Cliente.ToListAsync();
         }
-
+        //Read
         [HttpGet("{id}")]
         public async Task<ActionResult<Cliente>> GetCliente(int id)
         {
@@ -71,6 +71,7 @@ namespace BancoBufunfaNovo.Controllers
             return NoContent();
         }
 
+        //Create
         [HttpPost]
         public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
         {
@@ -80,6 +81,7 @@ namespace BancoBufunfaNovo.Controllers
             return CreatedAtAction("GetCliente", new { id = cliente.Id }, cliente);
         }
 
+        //Delete
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente(int id)
         {
