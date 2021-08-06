@@ -109,22 +109,5 @@ namespace BancoBufunfaNovo.Controllers
         {
             return _context.Cliente.Any(e => e.Id == id);
         }
-        /*
-         *  TODO: Implementar Patch (Edit)
-        [HttpPatch]
-        [Route("api/[controller]{id}")]
-        public IActionResult EditCliente(int id, Cliente cliente)
-        {
-            //Checando se o usuário existe
-            var clienteAtual = _clienteData.GetCliente(id);
-
-            if (clienteAtual != null)
-            {
-                cliente.Id = clienteAtual.Id;
-                _clienteData.EditCliente(cliente);
-            }
-            return Ok(cliente);
-        }
-        */
     }
 }
