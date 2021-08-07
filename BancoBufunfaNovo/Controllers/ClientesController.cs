@@ -10,13 +10,6 @@ using BancoBufunfaNovo.Models;
 
 namespace BancoBufunfaNovo.Controllers
 {
-    /*
-    private IClienteData _clienteData;
-    public ClienteController(IClienteData clienteData)
-    {
-        _clienteData = clienteData;
-    }
-    */
     [Route("api/[controller]")]
     [ApiController]
     public class ClientesController : ControllerBase

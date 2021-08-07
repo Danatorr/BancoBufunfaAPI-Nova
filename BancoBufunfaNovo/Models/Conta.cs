@@ -12,10 +12,10 @@ namespace BancoBufunfaNovo.Models
 
         public int NumeroConta { get; set; }
         
-        public double Saldo { get; private set; }
+        public double Saldo { get; set; }
 
         public int clienteId { get; set; }
-        public Cliente Cliente { get; set; }
+        //public Cliente Cliente { get; set; }
 
         [Required]
         [MaxLength(1, ErrorMessage = "O tipo de conta só pode ter 1 caractere!")]

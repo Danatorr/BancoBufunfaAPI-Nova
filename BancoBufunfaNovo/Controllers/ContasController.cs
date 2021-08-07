@@ -41,6 +41,7 @@ namespace BancoBufunfaNovo.Controllers
             return Ok(conta);
         }
 
+        //Update
         [HttpPut("{id}")]
         public async Task<IActionResult> PutConta(int id, Conta conta)
         {
@@ -69,7 +70,7 @@ namespace BancoBufunfaNovo.Controllers
 
             return NoContent();
         }
-
+        
         //Create conta
         [HttpPost]
         public async Task<ActionResult<Conta>> PostConta(Conta conta)
